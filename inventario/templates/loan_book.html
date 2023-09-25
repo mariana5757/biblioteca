@@ -1,0 +1,18 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block content %}
+
+<body>
+    <h1>Prestamo</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <h2>{{book.name}}</h2>
+        {{form.as_p}}
+        <a href="/books">
+            <button>Prestar</button>
+        </a>
+    </form>
+    <h3>{{message}}</h3>
+</body>
+
+{% endblock %}

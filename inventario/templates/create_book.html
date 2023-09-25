@@ -1,0 +1,18 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block content %}
+
+<body>
+    <h1>Registrar Libro</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <h2>Registrar Usuario</h2>
+        {{form.as_p}}
+        <a href="/books">
+            <button>Guardar</button>
+        </a>
+        
+    </form>
+</body>
+
+{% endblock %}

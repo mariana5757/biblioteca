@@ -1,0 +1,12 @@
+{% extends 'layouts/base.html'%}
+{% block content %}
+    
+    <p>Titulo: {{book.name}}</p>
+    <p>Autor: {{book.author}}</p>
+    <p>Cantidad disponible: {{book.units}}</p>
+    <a href="/book/prestamo-{{book.id}}">
+        <button>Prestar</button>
+    </a>
+    
+
+{% endblock %}
